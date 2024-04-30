@@ -4,10 +4,10 @@ import { ref } from "vue";
 // import { mdiAccount } from "@mdi/js";
 // theme
 import { useTheme } from "vuetify";
+const theme = useTheme();
 function toggleTheme() {
   theme.global.name.value = theme.global.current.value.dark ? "light" : "customDarkTheme";
 }
-const theme = useTheme();
 // lang
 let lang = ref("ar");
 function changeLocale(locale) {
@@ -37,12 +37,12 @@ function changeLocale(locale) {
           hide-details
         ></v-switch>
         <!-- theme switch -->
-        <v-btn @click="toggleTheme" color="indigo-darken-3"
-          >toggle theme
-          <v-icon icon="mdi-home" />
-        </v-btn>
-  
+          <v-icon @click="toggleTheme" :icon="theme.global.name.value == 'customDarkTheme' ? 'mdi-weather-night' : 'mdi-weather-sunny'">
+          </v-icon>
+
+
         <div>{{ $t("hello") }}</div>
+        <!-- <v-switch label="Switch" prepend-icon="$vuetify"></v-switch> -->
       </v-container>
     </v-app>
   </v-locale-provider>
