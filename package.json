@@ -11,10 +11,14 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@luxdamore/vue-cursor-fx": "^1.6.2",
     "@vueuse/core": "^10.9.0",
     "sass-loader": "^14.1.1",
+    "tsparticles-slim": "^2.12.0",
     "vue": "^3.4.21",
     "vue-i18n": "^9.10.2",
+    "vue3-particles": "^2.12.0",
+    "vue3-perfect-scrollbar": "^2.0.0",
     "vuetify": "^3.5.13"
   },
   "devDependencies": {
